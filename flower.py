@@ -130,11 +130,18 @@ def draw_flower(screen, flower):
         (x + 5, leaf_y, 18, 10)
     )
 
+def draw_sun(screen):
+    pygame.draw.circle(screen, SUN_YELLOW, (700, 80), 45)
+    
+
 
 def draw_screen(screen, flowers):
     #background sky
     screen.fill(SKY_BLUE)
 
+    #clouds
+    draw_sun(screen)
+    draw_cloud(screen, 90, 80)
     #grass
     pygame.draw.rect(screen, GRASS_GREEN,  (0, HEIGHT // 2, WIDTH, HEIGHT // 2))
 
