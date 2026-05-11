@@ -143,5 +143,21 @@ def draw_screen(screen, flowers):
 
 
 def main():
+    screen = setup_screen()
+    clock = create_clock()
+    flowers = []
+    running = True
+
+    while running:
+        running = handle_events(flowers)
+        update_flowers(flowers)
+        draw_screen(screen, flowers)
+        clock.tick(60)
+
+    close_program()
+
+
+if __name__ == "__main__":
+    main()
 
 
