@@ -44,7 +44,8 @@ def create_seed(x, y):
             (255, 140, 0),   #orange
             (255, 99, 71)    #coral
         ]),
-        "grown": False
+        "grown": False,
+        "sway_offset": random.uniform(0, math.pi * 2)
     }
 
 
@@ -81,6 +82,9 @@ def draw_flower(screen, flower):
     growth = flower["growth"]
     petals = flower["petals"]
     petal_color = flower["color"]
+    
+    sway = math.sin(pygame.time.get_ticks() * 0.003 + flower["sway_offset"]) * 6
+
 
     #stem 
     stem_height = int(growth * 2)
@@ -88,12 +92,12 @@ def draw_flower(screen, flower):
         screen,
         STEM_GREEN,
         (x, y),
-        (x, y - stem_height),
+        (x + sway, y - stem_height),
         4
     )
 
     #flower center position
-    center_x = x
+    center_x = x + int(sway)
     center_y = y - stem_height
 
     # petal size 
