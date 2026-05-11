@@ -135,6 +135,13 @@ def draw_screen(screen, flowers):
     #grass
     pygame.draw.rect(screen, GRASS_GREEN,  (0, HEIGHT // 2, WIDTH, HEIGHT // 2))
 
-    
+    #draw all flowers
+    for flower in flowers:
+        draw_flower(screen, flower)
+
+    pygame.display.flip()
+
+
+def main():
 
 
