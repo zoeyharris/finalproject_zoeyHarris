@@ -114,12 +114,27 @@ def draw_flower(screen, flower):
     # draw center
     pygame.draw.circle(
         screen,
-        CENTER_BROWN
-        petal_color,
-        (petal_x, petal_y),
+        CENTER_BROWN,
+        (center_x, center_y),
         center_radius
     )
 
     #optional leaf
+    leaf_y = y - stem_height // 2
+    pygame.draw.ellipse(
+        screen,
+        STEM_GREEN,
+        (x + 5, leaf_y, 18, 10)
+    )
+
+
+def draw_screen(screen, flowers):
+    #background sky
+    screen.fill(SKY_BLUE)
+
+    #grass
+    pygame.draw.rect(screen, GRASS_GREEN,  (0, HEIGHT // 2, WIDTH, HEIGHT // 2))
+
+    
 
 
