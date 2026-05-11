@@ -140,14 +140,23 @@ def draw_cloud(screen, x, y):
     pygame.draw.circle(screen, WHITE, (x + 55, y), 25)
     pygame.draw.circle(screen, WHITE, (x + 25, y + 10), 25)
 
-    
+
+def draw_title(screen):
+    font = pygame.font.SysFont("Arial", 28)
+    text = font.render("Click the grass to grow your garden!", True, TEXT_COLOR)
+    screen.blit(TEXT, (220, 20))
+
+
 def draw_screen(screen, flowers):
     #background sky
     screen.fill(SKY_BLUE)
 
-    #clouds
+    #clouds and sun
     draw_sun(screen)
     draw_cloud(screen, 90, 80)
+    draw_cloud(screen, 300, 120)
+    draw_cloud(screen, 520, 70)
+    draw_title(screen)
     #grass
     pygame.draw.rect(screen, GRASS_GREEN,  (0, HEIGHT // 2, WIDTH, HEIGHT // 2))
 
