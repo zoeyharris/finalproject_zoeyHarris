@@ -52,4 +52,9 @@ def grow_flower(flower):
         flower["grown"] = True
 
 
+def update_flowers(flowers):
+    for flower in flowers:
+        grow_flower(flower)
+
+
 def 
