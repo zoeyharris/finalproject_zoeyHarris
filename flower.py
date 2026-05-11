@@ -68,3 +68,23 @@ def handle_events(flowers):
             #only plant flowers in the grass area 
             if y > HEIGHT // 2:
                 flowers.append(create_seed(x, y))
+
+    return True
+
+
+def draw_flower(screen, flower):
+    x = flower["x"]
+    y = flower["y"]
+    growth = flower["growth"]
+    petals = flower["petals"]
+    petal_color = flower["color"]
+
+    #stem 
+    stem_height = int(growth * 2)
+    pygame.draw.line(
+        screen,
+        STEM_GREEN,
+        (x, y),
+        (x, y - stem_height),
+        4
+    )
