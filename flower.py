@@ -132,9 +132,15 @@ def draw_flower(screen, flower):
 
 def draw_sun(screen):
     pygame.draw.circle(screen, SUN_YELLOW, (700, 80), 45)
+
+
+def draw_cloud(screen, x, y):
+    pygame.draw.circle(screen, WHITE, (x, y), 25)
+    pygame.draw.circle(screen, WHITE, (x + 25, y - 10), 30)
+    pygame.draw.circle(screen, WHITE, (x + 55, y), 25)
+    pygame.draw.circle(screen, WHITE, (x + 25, y + 10), 25)
+
     
-
-
 def draw_screen(screen, flowers):
     #background sky
     screen.fill(SKY_BLUE)
