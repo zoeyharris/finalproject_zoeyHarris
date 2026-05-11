@@ -26,3 +26,21 @@ def close_program():
     pygame.quit()
 
 
+def create_seed(x, y):
+    return {
+        "x": x,
+        "y": y,
+        "growth": 5,
+        "max_growth": random.randint(30, 60),
+        "petals": random.randint(6, 12),
+        "color": random.choice([
+            (255, 105, 180), #pink
+            (255, 182, 193), #light pink
+            (255, 215, 0),   #yellow
+            (186, 85, 211),  #purple
+            (255, 140, 0),   #orange
+            (255, 99, 71)    #coral
+        ]),
+        "grown": False
+
+    }
