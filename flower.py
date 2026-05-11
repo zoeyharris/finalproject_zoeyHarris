@@ -9,3 +9,10 @@ SKY_BLUE = (200, 230, 255)
 GRASS_GREEN = (170, 220, 140)
 STEM_GREEN = (40, 140, 70)
 CENTER_BROWN = (120, 80, 40)
+
+
+def setup_screen():
+    pygame.init()
+    screen = pygame.display.set_mode((WIDTH, HEIGHT))
+    pygame.display.set_caption("Procedural Flower Garden")
+    return screen
