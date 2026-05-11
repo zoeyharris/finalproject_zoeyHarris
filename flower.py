@@ -57,4 +57,14 @@ def update_flowers(flowers):
         grow_flower(flower)
 
 
-def 
+def handle_events(flowers):
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            return False
+        
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            x, y = event.pos
+
+            #only plant flowers in the grass area 
+            if y > HEIGHT // 2:
+                flowers.append(create_seed(x, y))
