@@ -42,5 +42,14 @@ def create_seed(x, y):
             (255, 99, 71)    #coral
         ]),
         "grown": False
-
     }
+
+
+def grow_flower(flower):
+    if flower["gorwth"] < flower["max_growth"]:
+        flower["growth"] += 0.3
+    else:
+        flower["grown"] = True
+
+
+def 
