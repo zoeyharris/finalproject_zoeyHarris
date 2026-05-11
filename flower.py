@@ -20,3 +20,9 @@ def setup_screen():
 
 def create_clock():
     return pygame.time.Clock()
+
+
+def close_program():
+    pygame.quit()
+
+
