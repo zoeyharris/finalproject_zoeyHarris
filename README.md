@@ -7,7 +7,7 @@ Demo Video: <INSERT VIDEO URL HERE>
 
 ## GitHub Repository
 
-GitHub Repo: <INSERT GITHUB REPOSITORY URL HERE>
+GitHub Repo: [<INSERT GITHUB REPOSITORY URL HERE>](https://github.com/zoeyharris/finalproject_zoeyHarris.git)
 
 ## Description
 
