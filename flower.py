@@ -16,3 +16,7 @@ def setup_screen():
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Procedural Flower Garden")
     return screen
+
+
+def create_clock():
+    return pygame.time.Clock()
