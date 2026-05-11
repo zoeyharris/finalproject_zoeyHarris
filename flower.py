@@ -9,7 +9,7 @@ SKY_BLUE = (200, 230, 255)
 GRASS_GREEN = (170, 220, 140)
 STEM_GREEN = (40, 140, 70)
 CENTER_BROWN = (120, 80, 40)
-WHITE = 800
+WHITE = (255, 255, 255)
 SUN_YELLOW = (255, 220, 80)
 TEXT_COLOR = (80, 80, 80)
 
@@ -144,7 +144,7 @@ def draw_cloud(screen, x, y):
 def draw_title(screen):
     font = pygame.font.SysFont("Arial", 28)
     text = font.render("Click the grass to grow your garden!", True, TEXT_COLOR)
-    screen.blit(TEXT, (220, 20))
+    screen.blit(text, (220, 20))
 
 
 def draw_screen(screen, flowers):
@@ -157,6 +157,7 @@ def draw_screen(screen, flowers):
     draw_cloud(screen, 300, 120)
     draw_cloud(screen, 520, 70)
     draw_title(screen)
+    
     #grass
     pygame.draw.rect(screen, GRASS_GREEN,  (0, HEIGHT // 2, WIDTH, HEIGHT // 2))
 
