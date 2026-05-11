@@ -9,6 +9,9 @@ SKY_BLUE = (200, 230, 255)
 GRASS_GREEN = (170, 220, 140)
 STEM_GREEN = (40, 140, 70)
 CENTER_BROWN = (120, 80, 40)
+WHITE = 800
+SUN_YELLOW = (255, 220, 80)
+TEXT_COLOR = (80, 80, 80)
 
 
 def setup_screen():
