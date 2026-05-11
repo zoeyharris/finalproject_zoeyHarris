@@ -92,7 +92,7 @@ def draw_flower(screen, flower):
         screen,
         STEM_GREEN,
         (x, y),
-        (x + sway, y - stem_height),
+        (x + int(sway), y - stem_height),
         4
     )
 
