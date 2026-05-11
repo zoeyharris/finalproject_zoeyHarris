@@ -88,3 +88,38 @@ def draw_flower(screen, flower):
         (x, y - stem_height),
         4
     )
+
+    #flower center position
+    center_x = x
+    center_y = y - stem_height
+
+    # petal size 
+    petal_distance = int(growth * 0.6)
+    petal_radius = max(4, int(growth * 0.3))
+    center_radius = max(5, int(growth * 0.25))
+
+    #draw petals in a circle
+    for i in range(petals):
+        angle = (2 * math.pi / petals) * i
+        petal_x = center_x + int(math.cos(angle) * petal_distance)
+        petal_y = center_y + int(math.sin(angle) * petal_distance)
+
+        pygame.draw.circle(
+            screen,
+            petal_color,
+            (petal_x, petal_y),
+            petal_radius
+        )
+
+    # draw center
+    pygame.draw.circle(
+        screen,
+        CENTER_BROWN
+        petal_color,
+        (petal_x, petal_y),
+        center_radius
+    )
+
+    #optional leaf
+
+
