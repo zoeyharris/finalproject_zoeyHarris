@@ -46,7 +46,7 @@ def create_seed(x, y):
 
 
 def grow_flower(flower):
-    if flower["gorwth"] < flower["max_growth"]:
+    if flower["growth"] < flower["max_growth"]:
         flower["growth"] += 0.3
     else:
         flower["grown"] = True
